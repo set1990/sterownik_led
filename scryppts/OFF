@@ -1,0 +1,11 @@
+sudo kill `ps -ef | grep "/home/pi/RGB_changer.py" | grep -v grep |awk '{ print $2 }'`
+echo "0" > /sys/class/gpio/gpio7/value
+echo "0" > /sys/class/gpio/gpio8/value  
+echo "0" > /sys/class/gpio/gpio25/value 
+echo "0" > /sys/class/gpio/gpio24/value 
+echo "0" > /sys/class/gpio/gpio18/value 
+echo "0" > /sys/class/gpio/gpio9/value  
+echo "0" > /sys/class/gpio/gpio22/value
+echo "0" > /sys/class/gpio/gpio27/value 
+echo "0" > /sys/class/gpio/gpio17/value 
+echo "0" > /sys/class/gpio/gpio4/value  

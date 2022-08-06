@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>RPi Web Server</title>
+   <style>
+      header {
+         text-align:center;
+      }
+
+      nav {
+         background-color:#eeeeee;
+         padding:10px;
+         text-align:center;
+      }
+
+      section {
+         padding:50px;
+      }
+
+      .button {
+         border: none;
+         color: white;
+         padding: 16px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 10px 4px;
+         transition-duration: 0.4s;
+         cursor: pointer;
+      }
+
+      .button1 {
+         background-color: white;
+         color: black;
+         border: 2px solid #4CAF50;
+      }
+
+      .button1:hover {
+         background-color: #4CAF50;
+         color: white;
+      }
+
+      .button2 {
+         background-color: white;
+         color: black;
+         border: 2px solid #008CBA;
+      }
+
+      .button2:hover {
+         background-color: #008CBA;
+         color: white;
+      }
+   </style>
+</head>
+<body>
+   <header>
+      <h1><img src="/static/solution.png" width="50" height="60">RPi Web Server<img src="/static/logo.png" width="50" height="60"></h1>
+   </header>
+   <nav>
+      <a href="/room" target="iframe_a"><button type="button" class="button button1">ROOM</button></a>
+      <a href="/black_wall" target="iframe_a"><button type="button" class="button button2">BLACK</button></a>
+      <a href="/lamp" target="iframe_a"><button type="button" class="button button2">WHITE</button></a>
+      <a href="/picture" target="iframe_a"><button type="button" class="button button1">CAPS</button></a>
+      <a href="/green_wall" target="iframe_a"><button type="button" class="button button2">GREEN</button></a>
+   </nav>
+   <section>
+      <iframe name="iframe_a" width="100%" height="800"  style="border:none;"></iframe>
+   </section>
+</body>
+</html>

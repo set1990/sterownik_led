@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<head>
+    <title>room</title>
+    <style>
+        body {
+            background-image: url('/static/room.png');
+            background-position: center top+30px;
+            background-repeat: no-repeat;
+            background-size: 850px auto;
+            margin-top: 100px;
+        }
+        table, th, td {
+            border: 5px ;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .button {
+            border: none;
+            color: white;
+            padding: 16px 22px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px 4px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+  			width: 150px;
+        }
+
+        .button1 {
+            background-color: white;
+            color: black;
+            border: 2px solid #ffcc00;
+        }
+
+        .button1:hover {
+            background-color: #ffcc00;
+            color: white;
+        }
+
+        .button4 {
+            background-color: white;
+            color: black;
+            border: 2px solid gray;
+        }
+
+        .button4:hover {
+            background-color: gray;
+            color: white;
+        }
+    </style>
+    <script>
+        function make_control(order){
+		    var xhttp = new XMLHttpRequest();
+		    xhttp.open('GET', order, false);
+		    xhttp.send();
+		    alert(xhttp.responseText);
+		}
+	</script>
+</head>
+<body>
+    <table>
+        <tr>
+            <th style="border:5px solid black; padding:10px; position: relative; right: 30px; background-color: #b3b3cc">
+    	        <table>
+        	        DEFAULT
+                    <tr>
+            	        <td><button type="button" class="button button1" onclick="make_control(`/device_control?name=DEFAULT&value=0`)">ON</button></td>
+                    </tr>
+    	        </table>
+            </th>
+            <th style="border:5px solid black; padding:10px; position: relative; background-color: #b3b3cc">
+    	        <table>
+        	        ONE FROM THREE
+                    <tr>
+            	        <td><button type="button" class="button button1" onclick="make_control(`/device_control?name=OneFromThree&value=0`)">ON</button></td>
+                    </tr>
+    	        </table>
+            </th>
+            <th style="border:5px solid black; padding:10px; position: relative; left: 30px; background-color: #b3b3cc">
+    	        <table>
+        	        LED TEST
+                    <tr>
+            	        <td><button type="button" class="button button1" onclick="make_control(`/device_control?name=TEST&value=0`)">ON</button></td>
+                    </tr>
+    	        </table>
+            </th>
+        </tr>
+        <tr style="position: relative; top: 50px">
+           	<th>
+            </th>
+            <th style="border:5px solid black; padding:10px; position: relative; background-color: #b3b3cc">
+    	    	<table>
+        	        OFF ALL
+                    <tr>
+            	    	<td><button type="button" class="button button4 " onclick="make_control(`/device_control?name=OFF&value=0`)">OFF</button></td>
+                	</tr>
+    	    	</table>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

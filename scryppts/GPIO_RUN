@@ -1,0 +1,35 @@
+echo "7" > /sys/class/gpio/export
+echo "8" > /sys/class/gpio/export
+echo "25" > /sys/class/gpio/export
+echo "24" > /sys/class/gpio/export
+echo "18" > /sys/class/gpio/export
+echo "9" > /sys/class/gpio/export
+echo "22" > /sys/class/gpio/export
+echo "27" > /sys/class/gpio/export
+echo "17" > /sys/class/gpio/export
+echo "4" > /sys/class/gpio/export
+
+sleep 5
+
+echo "out" > /sys/class/gpio/gpio7/direction
+echo "out" > /sys/class/gpio/gpio8/direction
+echo "out" > /sys/class/gpio/gpio25/direction
+echo "out" > /sys/class/gpio/gpio24/direction
+echo "out" > /sys/class/gpio/gpio18/direction
+echo "out" > /sys/class/gpio/gpio9/direction
+echo "out" > /sys/class/gpio/gpio22/direction
+echo "out" > /sys/class/gpio/gpio27/direction
+echo "out" > /sys/class/gpio/gpio17/direction
+echo "out" > /sys/class/gpio/gpio4/direction
+
+sleep 2
+
+/home/pi/TEST
+
+sleep 2
+
+/home/pi/DEFAULT
+
+sleep 2
+
+sudo python3 /home/pi/HTTP_serwer.py &

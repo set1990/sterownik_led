@@ -1,0 +1,10 @@
+echo "1" > /sys/class/gpio/gpio7/value  #obrazki na ścianie          +
+echo "1" > /sys/class/gpio/gpio8/value  #ściana za kanapom CZERWONY  +
+echo "1" > /sys/class/gpio/gpio25/value #ściana z lampom CZERWONY    +
+echo "1" > /sys/class/gpio/gpio24/value #kapsle ZIELONY              +
+echo "1" > /sys/class/gpio/gpio18/value #ściana za kanapom ZIELONY   +
+echo "1" > /sys/class/gpio/gpio9/value  #kapsle NIEBIESKI            + 
+echo "1" > /sys/class/gpio/gpio22/value #ściana za kanapom NIEBIESKI +
+echo "1" > /sys/class/gpio/gpio27/value #ściana z lampom NIEBIESKI   +
+echo "1" > /sys/class/gpio/gpio17/value #kapsle CZERWONY             +
+echo "1" > /sys/class/gpio/gpio4/value  #ściana z lampom ZIELONY     +
