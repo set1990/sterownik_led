@@ -1,0 +1,6 @@
+if [ $1 -eq 1 ]
+then
+	wget http://192.168.1.100/relay/0?turn=on -O /dev/null
+else
+	wget http://192.168.1.100/relay/0?turn=off -O /dev/null
+fi

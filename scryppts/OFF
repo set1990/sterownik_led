@@ -9,3 +9,5 @@ echo "0" > /sys/class/gpio/gpio22/value
 echo "0" > /sys/class/gpio/gpio27/value 
 echo "0" > /sys/class/gpio/gpio17/value 
 echo "0" > /sys/class/gpio/gpio4/value  
+wget http://192.168.1.100/relay/0?turn=off -O /dev/null
+wget http://192.168.1.101/relay/0?turn=off -O /dev/null
